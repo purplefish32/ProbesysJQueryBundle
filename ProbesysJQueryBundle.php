@@ -6,9 +6,10 @@
  * @copyright  Copyright (c) 2011 Valery Nayda aka naydav <web@naydav.com>
  * @link  http://www.webcreator.kiev.ua
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
+ * @edited Donovan Tengblad
  */
 
-namespace WC\JQueryHelperBundle;
+namespace Probesys\ProbesysJQueryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -16,8 +17,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * JQueryHelperBundle.
  *
  * @author  naydav <web@naydav.com>
+ * @edited  Donovan Tengblad
  */
-class JQueryHelperBundle extends Bundle
+class ProbesysJQueryBundle extends Bundle
 {
     /**
      * {@inheritdoc}
