@@ -1,0 +1,27 @@
+{
+    "name": "probesys/admin-bundle",
+    "description": "JQuery helper",
+    "keywords": ["JQuery"],
+    "homepage": "http://probesys.com",
+    "type": "library",
+    "license": "http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3",
+    "authors": [
+        {
+            "name": "Nayda Valery (Original Author)",
+            "homepage": "http://www.webcreator.kiev.ua"
+        },
+        {
+            "name": "Donovan Tengblad",
+            "email": "donovan.tengblad@probesys.com",
+            "homepage": "http://probesys.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": { "Probesys\\JQueryBundle": "" }
+    },
+    "target-dir": "Probesys/JQueryBundle"
+}
+
