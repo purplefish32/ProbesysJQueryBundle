@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\JQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Render javascript code for include jQueryUI library.

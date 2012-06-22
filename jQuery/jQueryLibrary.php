@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\JQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Render javascript code for include jQuery library.
@@ -21,7 +21,7 @@ class jQueryLibrary extends AbstractLibrary
      * @const string
      */
     const CDN_SUBFOLDER_GOOGLE = 'jquery/';
-    
+
     /**
      * Always uses compressed version, because this is assumed to be the use case
      * in production enviroment. An uncompressed version has to included manually.

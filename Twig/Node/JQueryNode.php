@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\Twig\Node;
+namespace Probesys\JQueryBundle\Twig\Node;
 
 /**
  * Represents a javascript node.
@@ -27,7 +27,7 @@ class JQueryNode extends \Twig_Node
     {
         parent::__construct(array('method' => $method), array(), $lineno, $tag);
     }
-    
+
     /**
      * Compiles the node to PHP.
      *
@@ -37,7 +37,7 @@ class JQueryNode extends \Twig_Node
     {
         $compiler
             ->addDebugInfo($this)
-            ->write("echo \$this->env->getExtension('templating')->getContainer()->get('jquery.api')->")
+            ->write("echo \$this->env->getExtension('jquery')->getApi()->")
             ->raw($this->getNode('method')->getAttribute('value'))
             ->raw("();\n");
         ;

@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\jQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * NoConflictMode Class.
@@ -76,9 +76,14 @@ class NoConflictMode implements Renderer
      */
     public function getNoConflictModeHandler()
     {
-        return $this->_noConflictModeHandler;
+        if($this->getNoConflictMode()) {
+            return $this->_noConflictModeHandler;
+        }
+        else{
+            return "$";
+        }
     }
-    
+
     /**
      * Generate javascript for set No conflict mode.
      *

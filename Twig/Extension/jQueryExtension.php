@@ -8,10 +8,10 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\Twig\Extension;
+namespace Probesys\JQueryBundle\Twig\Extension;
 
-use WC\JQueryHelperBundle\JQuery\Api as jQueryApi,
-    WC\JQueryHelperBundle\Twig\TokenParser\JQueryTokenParser;
+use Probesys\JQueryBundle\JQuery\Api as jQueryApi,
+    Probesys\JQueryBundle\Twig\TokenParser\jQueryTokenParser;
 
 /**
  * Twig Extension for jQuery support.
@@ -20,6 +20,12 @@ use WC\JQueryHelperBundle\JQuery\Api as jQueryApi,
  */
 class jQueryExtension extends \Twig_Extension
 {
+    protected $jqueryApi;
+
+    public function __construct($jqueryApi){
+        $this->jqueryApi = $jqueryApi;
+    }
+
     /**
      * Returns the token parser instance to add to the existing list.
      *
@@ -32,7 +38,7 @@ class jQueryExtension extends \Twig_Extension
             new jQueryTokenParser(),
         );
     }
-    
+
     /**
      * Returns the name of the extension.
      *
@@ -41,5 +47,9 @@ class jQueryExtension extends \Twig_Extension
     public function getName()
     {
         return 'jquery';
+    }
+
+    public function getApi(){
+        return $this->jqueryApi;
     }
 }

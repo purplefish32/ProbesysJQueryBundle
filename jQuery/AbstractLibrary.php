@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\JQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Render javascript code for include library.
@@ -43,7 +43,7 @@ abstract class AbstractLibrary implements Library,
      * @var boolean
      */
     protected $_useSsl = false;
-    
+
     /**
      * Local path to library
      *
@@ -72,7 +72,7 @@ abstract class AbstractLibrary implements Library,
      * Set the version of the jQuery library used.
      *
      * @param string $version
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setVersion($version)
     {
@@ -83,7 +83,7 @@ abstract class AbstractLibrary implements Library,
     /**
      * Set Use SSL Flag
      *
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setSsl($flag)
     {
@@ -105,7 +105,7 @@ abstract class AbstractLibrary implements Library,
      * Set path to local library
      *
      * @param  string $path
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setLocalPath($path)
     {

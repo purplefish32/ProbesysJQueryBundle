@@ -8,12 +8,12 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\Twig\TokenParser;
+namespace Probesys\JQueryBundle\Twig\TokenParser;
 
-use WC\JQueryHelperBundle\Twig\Node\JQueryNode;
+use Probesys\JQueryBundle\Twig\Node\JQueryNode;
 
 /**
- * 
+ *
  *
  * @author Fabien Potencier <fabien.potencier@symfony-project.com>
  */

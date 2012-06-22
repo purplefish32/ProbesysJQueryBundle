@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\DependencyInjection;
+namespace Probesys\JQueryBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension,
     Symfony\Component\DependencyInjection\ContainerBuilder,
@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension,
  *
  * @author  naydav <web@naydav.com>
  */
-class JQueryHelperExtension extends Extension
+class ProbesysJQueryExtension extends Extension
 {
     /**
      * Loads the JQueryHelper configuration.
@@ -33,7 +33,7 @@ class JQueryHelperExtension extends Extension
     {
         // load default config
         $fileLocator = new FileLocator(__DIR__.'/../Resources/config');
-        $defaultConfig = Yaml::load($fileLocator->locate('default.yml'));
+        $defaultConfig = Yaml::parse($fileLocator->locate('default.yml'));
 
         // build main config
         foreach ($configs as $config) {
@@ -41,7 +41,7 @@ class JQueryHelperExtension extends Extension
             // set parametrs to container
             $this->_setParametrsToContainer($config, $container);
         }
-        
+
         // load dependency injection config
         $loader = new XmlFileLoader($container, $fileLocator);
         $loader->load('helper.xml');
@@ -63,7 +63,7 @@ class JQueryHelperExtension extends Extension
         }
         return $current;
     }
-    
+
     /**
      * Set parametrs into container.
      *
@@ -94,6 +94,6 @@ class JQueryHelperExtension extends Extension
      */
     public function getAlias()
     {
-        return 'j_query_helper';
+        return 'probesys_j_query';
     }
 }

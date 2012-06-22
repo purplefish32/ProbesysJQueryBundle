@@ -8,11 +8,11 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\jQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Invalid Argument Exception
- * 
+ *
  * @author naydav <web@naydav.com>
  */
 class InvalidArgumentException extends \InvalidArgumentException

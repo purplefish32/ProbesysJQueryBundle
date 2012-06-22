@@ -1,6 +1,6 @@
 # JQueryHelperBundle Configuration
 
-enable:             false
+enable:             true
 
 jquery:
   version:          1.5.1
@@ -11,7 +11,7 @@ jqueryui:
   version:          1.8.11
   ssl:              false
   localpath:        false
-    
+
 noconflictmode:
   enable:                true
   noConflictModeHandler: '$j'

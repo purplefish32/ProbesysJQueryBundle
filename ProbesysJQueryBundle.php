@@ -8,8 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  * @edited Donovan Tengblad
  */
-
-namespace Probesys\ProbesysJQueryBundle;
+namespace Probesys\JQueryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

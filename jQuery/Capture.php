@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\jQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Capture Class.
@@ -19,8 +19,8 @@ class Capture implements Renderer
 {
     /**
      * NoConflictMode helper
-     * 
-     * @var \WC\JQueryHelperBundle\jQuery\NoConflictMode
+     *
+     * @var \Probesys\JQueryBundle\jQuery\NoConflictMode
      */
     protected $_noConflictModeHelper;
 
@@ -30,7 +30,7 @@ class Capture implements Renderer
      * @var Boolean
      */
     protected $_captureLock = false;
-    
+
     /**
      * jQuery onLoad statements Stack
      *
@@ -43,9 +43,9 @@ class Capture implements Renderer
     /**
      * Set NoConflictMode helper
      *
-     * @param \WC\JQueryHelperBundle\jQuery\NoConflictMode $noConflictModeHelper
+     * @param \Probesys\JQueryBundle\jQuery\NoConflictMode $noConflictModeHelper
      * @return void
-     * @throws \WC\JQueryHelperBundle\jQuery\InvalidArgumentException
+     * @throws \Probesys\JQueryBundle\jQuery\InvalidArgumentException
      *         If wrong class NoConflictMode helper
      */
     public function setNoConflictModeHelper($noConflictModeHelper)
@@ -59,13 +59,13 @@ class Capture implements Renderer
     /**
      * Get NoConflictMode helper
      *
-     * @return \WC\JQueryHelperBundle\jQuery\NoConflictMode
+     * @return \Probesys\JQueryBundle\jQuery\NoConflictMode
      */
     public function getNoConflictModeHelper()
     {
         return $this->_noConflictModeHelper;
     }
-    
+
     /**
      * Start capturing routines to run onLoad
      *
@@ -98,7 +98,7 @@ class Capture implements Renderer
      * Add a script to execute onLoad
      *
      * @param  string $callback Lambda
-     * @return \WC\JQueryHelperBundle\jQuery\Capture
+     * @return \Probesys\JQueryBundle\jQuery\Capture
      */
     public function addOnLoad($callback)
     {
@@ -107,7 +107,7 @@ class Capture implements Renderer
         }
         return $this;
     }
-    
+
     /**
      * Retrieve all registered onLoad actions
      *
@@ -121,7 +121,7 @@ class Capture implements Renderer
     /**
      * Clear the onLoadActions stack.
      *
-     * @return \WC\JQueryHelperBundle\jQuery\Capture
+     * @return \Probesys\JQueryBundle\jQuery\Capture
      */
     public function clearOnLoadActions()
     {

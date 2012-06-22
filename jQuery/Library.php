@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\JQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Render javascript code for include library.
@@ -21,7 +21,7 @@ interface Library
      * Set the version of the jQuery library used.
      *
      * @param string $version
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setVersion($version);
 
@@ -35,7 +35,7 @@ interface Library
     /**
      * Set Use SSL Flag
      *
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setSsl($flag);
 
@@ -50,7 +50,7 @@ interface Library
      * Set path to local library
      *
      * @param  string $path
-     * @return \WC\JQueryHelperBundle\JQuery\Library
+     * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setLocalPath($path);
 

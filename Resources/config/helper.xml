@@ -7,12 +7,13 @@
     <services>
 
         <!-- T W I G   H E L P E R S -->
-        <service id="twig.extension.jquery" class="WC\JQueryHelperBundle\Twig\Extension\jQueryExtension">
+        <service id="twig.extension.jquery" class="Probesys\JQueryBundle\Twig\Extension\jQueryExtension">
             <tag name="twig.extension" alias="jquery" />
+            <argument type="service" id="jquery.api" />
         </service>
 
         <!-- B U N D L E  I N T E R N A L  O B J E C T S-->
-        <service id="jquery.api" class="WC\JQueryHelperBundle\jQuery\Api">
+        <service id="jquery.api" class="Probesys\JQueryBundle\jQuery\Api">
             <call method="setEnable">
                 <argument>%templating.enable%</argument>
             </call>
@@ -26,7 +27,7 @@
             </call>
         </service>
 
-        <service id="jquery.library.jQueryLibrary" class="WC\JQueryHelperBundle\jQuery\jQueryLibrary">
+        <service id="jquery.library.jQueryLibrary" class="Probesys\JQueryBundle\jQuery\jQueryLibrary">
             <call method="setVersion">
                 <argument>%templating.jquery.version%</argument>
             </call>
@@ -38,7 +39,7 @@
             </call>
         </service>
 
-        <service id="jquery.library.jQueryUILibrary" class="WC\JQueryHelperBundle\jQuery\jQueryUILibrary">
+        <service id="jquery.library.jQueryUILibrary" class="Probesys\JQueryBundle\jQuery\jQueryUILibrary">
             <call method="setVersion">
                 <argument>%templating.jqueryui.version%</argument>
             </call>
@@ -50,13 +51,13 @@
             </call>
         </service>
 
-        <service id="jquery.library.Capture" class="WC\JQueryHelperBundle\jQuery\Capture">
+        <service id="jquery.library.Capture" class="Probesys\JQueryBundle\jQuery\Capture">
             <call method="setNoConflictModeHelper">
                 <argument type="service" id="jquery.library.NoConflictMode" />
             </call>
         </service>
 
-        <service id="jquery.library.NoConflictMode" class="WC\JQueryHelperBundle\jQuery\NoConflictMode">
+        <service id="jquery.library.NoConflictMode" class="Probesys\JQueryBundle\jQuery\NoConflictMode">
             <call method="setNoConflictMode">
                 <argument>%templating.noconflictmode.enable%</argument>
             </call>

@@ -8,7 +8,7 @@
  * @license  http://www.gnu.org/licenses/gpl-3.0.html  GNU GPLv3
  */
 
-namespace WC\JQueryHelperBundle\jQuery;
+namespace Probesys\JQueryBundle\jQuery;
 
 /**
  * Api Class implements jQuery support.
@@ -35,7 +35,7 @@ class Api implements Renderer
      * Set Enable/Disable jQuery flag
      *
      * @param bool $flag
-     * @return \WC\JQueryHelperBundle\jQuery\Api
+     * @return \Probesys\JQueryBundle\jQuery\Api
      */
     public function setEnable($flag)
     {
@@ -70,9 +70,9 @@ class Api implements Renderer
      * Set render helper.
      *
      * @paramm string $name Helper name
-     * @param \WC\JQueryHelperBundle\jQuery\Renderer $renderHelper
+     * @param \Probesys\JQueryBundle\jQuery\Renderer $renderHelper
      * @return void
-     * @throws \WC\JQueryHelperBundle\jQuery\InvalidArgumentException
+     * @throws \Probesys\JQueryBundle\jQuery\InvalidArgumentException
      *         If render helper not implements of Renderer
      */
     public function setRenderHelper($name, Renderer $renderHelper)

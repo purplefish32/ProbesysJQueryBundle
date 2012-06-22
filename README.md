@@ -1,35 +1,10 @@
-Все вопросы в http://zendframework.ru/forum/index.php?topic=4313.msg29127
-ЭТОТ БАНДЛ ЯВЛЯЕТЬСЯ ЭКСПЕРЕМЕНТАЛЬНЫМ
 ======================================================================
-
-JQueryHelperBundle: Added jQuery support to Symfony2
+ProbesysJQueryBundle: Added jQuery support to Symfony2
 ======================================================================
 
 ## Installation
 
-### Add JQueryHelperBundle to your src/Bundle dir
 
-    git submodule add git://github.com/naydav/JQueryHelperBundle.git src/WC/JQueryHelperBundle
-
-### Add JQueryHelperBundle to your application kernel
-
-    // app/AppKernel.php
-    public function registerBundles()
-    {
-        return array(
-            // ...
-            new WC\JQueryHelperBundle\JQueryHelperBundle(),
-            // ...
-        );
-    }
-
-### Register the WC namespace
-
-    // app/autoload.php
-    $loader->registerNamespaces(array(
-        'WC'       => __DIR__.'/../src',
-        // your other namespaces
-    ));
 
 ### Update your config
 
@@ -69,7 +44,7 @@ JQueryHelperBundle: Added jQuery support to Symfony2
 Example 1:
     Config:
         // app/config/config.yml
-        j_query_helper:
+        probesys_j_query:
           enable:             true
 
           jquery:
@@ -90,7 +65,7 @@ Example 1:
 Example 2:
     Config:
     // app/config/config.yml
-        j_query_helper:
+        probesys_j_query:
           enable:             true
 
           jquery:
