@@ -3,7 +3,7 @@
 enable:             true
 
 jquery:
-  version:          1.5.1
+  version:          1.7.2
   ssl:              false
   localpath:        false
 
@@ -13,5 +13,5 @@ jqueryui:
   localpath:        false
 
 noconflictmode:
-  enable:                true
+  enable:                false
   noConflictModeHandler: '$j'
