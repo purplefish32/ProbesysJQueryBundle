@@ -10,6 +10,9 @@ https://github.com/naydav/JQueryHelperBundle
 Add this line to your composer.json file :
     "probesys/jquery-bundle": "master",
 
+Install composer and run:
+    php composer.phar update
+
 Add this line to your AppKernel.php file:
     new Probesys\JQueryBundle\ProbesysJQueryBundle(),
 

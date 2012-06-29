@@ -3,7 +3,7 @@
 enable:             		false
 
 jquery:
-    version:          		1.7.22
+    version:          		1.7.2
     ssl:              		false
     localpath:        		false
 
