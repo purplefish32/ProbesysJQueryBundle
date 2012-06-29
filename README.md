@@ -2,29 +2,32 @@
 ProbesysJQueryBundle: Added jQuery support to Symfony2
 ======================================================================
 
+Based on the work of Nayda Valery :
+https://github.com/naydav/JQueryHelperBundle
+
 ## Installation
 
+Add this line to your composer.json file :
+    "probesys/jquery-bundle": "master",
 
-
-### Update your config
+Add this line to your AppKernel.php file:
+    new Probesys\JQueryBundle\ProbesysJQueryBundle(),
 
 #### Default config
-
-    // \WC\JQueryHelperBundle\JQueryHelperBundle\Resources\config\default.yaml
     enable:             false
 
     jquery:
-      version:          1.5.1
+      version:          1.7.2
       ssl:              false
       localpath:        false
 
     jqueryui:
-      version:          1.8.11
+      version:          1.8.21
       ssl:              false
       localpath:        false
 
     noconflictmode:
-      enable:                true
+      enable:                false
       noConflictModeHandler: '$j'
 
 ## Using
@@ -32,12 +35,19 @@ ProbesysJQueryBundle: Added jQuery support to Symfony2
 ### Twig
 
     {% jquery 'render' %} for generate all javascripts with libraries
-    or {% jquery 'renderOnLoad' %} for generate only javascripts without libraries
+    or {% jquery 'renderOnLoad' %} for generate only javascripts without libraries (Currently untested)
 
     OnLoad script capture
     {% block onload %}
-        {% jquery 'addOnLoad' %} onLoad javascript {% jquery 'addOnLoadEnd' %}
+        {% jquery 'addOnLoad' %} onLoad javascript {% jquery 'addOnLoadEnd' %} (Currently untested)
     {% endblock %}
+
+
+### Using a local copy of jQuery as fallback
+Only jquery 1.7.2 for the moment, If you need other versions just ask and I will add them
+    {% jquery 'render' %}
+    <!-- Fallback to local copy of jQuery -->
+    <script>window.jQuery || document.write('<script src="{{ asset("bundles/probesysjquery/js/jquery-1.7.2.min.js") }}"><\/script>')</script>
 
 ### Examples
 
@@ -45,16 +55,16 @@ Example 1:
     Config:
         // app/config/config.yml
         probesys_j_query:
-          enable:             true
+            enable:             true
 
           jquery:
-            version:          1.5.1
+              version:          1.5.1
 
           jqueryui:
-            version:          1.8.11
+              version:          1.8.11
 
           noconflictmode:
-            enable:           true
+              enable:           true
 
     Generate:
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -69,8 +79,8 @@ Example 2:
           enable:             true
 
           jquery:
-            version:          1.5.1
-            ssl:              true
+              version:          1.5.1
+              ssl:              true
 
           jqueryui:
           localpath:          'mypath/jquery.ui.v11.2.js'
@@ -105,16 +115,3 @@ Example 3:
         });
         //]]>
         </script>
-
-### TODO
-
- -) протестировать
-
- -) метод __toString для {% jquery %}
-
- -) разные уровни генерации (генерирует только либы, генерирует только джаваскрипт, генерирует все)
-
- -) глобальный рефакторинг
-
--) передачу переменной isXhtml
-
