@@ -18,9 +18,9 @@ namespace Probesys\JQueryBundle\Twig\Node;
 class JQueryNode extends \Twig_Node
 {
     /**
-     * @param \Twig_NodeInterface $value
-     * @param integer $lineno
-     * @param string $tag (optional)
+     * @param  \Twig_NodeInterface $value
+     * @param  integer             $lineno
+     * @param  string              $tag    (optional)
      * @return void
      */
     public function __construct(\Twig_NodeInterface $method, $lineno, $tag = null)

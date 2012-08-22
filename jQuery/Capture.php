@@ -43,7 +43,7 @@ class Capture implements Renderer
     /**
      * Set NoConflictMode helper
      *
-     * @param \Probesys\JQueryBundle\jQuery\NoConflictMode $noConflictModeHelper
+     * @param  \Probesys\JQueryBundle\jQuery\NoConflictMode           $noConflictModeHelper
      * @return void
      * @throws \Probesys\JQueryBundle\jQuery\InvalidArgumentException
      *         If wrong class NoConflictMode helper
@@ -78,6 +78,7 @@ class Capture implements Renderer
         }
 
         $this->_captureLock = true;
+
         return \ob_start();
     }
 
@@ -91,13 +92,14 @@ class Capture implements Renderer
         $data = \ob_get_clean();
         $this->_captureLock = false;
         $this->addOnLoad($data);
+
         return true;
     }
 
     /**
      * Add a script to execute onLoad
      *
-     * @param  string $callback Lambda
+     * @param  string                                $callback Lambda
      * @return \Probesys\JQueryBundle\jQuery\Capture
      */
     public function addOnLoad($callback)
@@ -105,6 +107,7 @@ class Capture implements Renderer
         if (! in_array($callback, $this->_onLoadActions, true)) {
             $this->_onLoadActions[] = $callback;
         }
+
         return $this;
     }
 
@@ -126,6 +129,7 @@ class Capture implements Renderer
     public function clearOnLoadActions()
     {
         $this->_onLoadActions = array();
+
         return $this;
     }
 

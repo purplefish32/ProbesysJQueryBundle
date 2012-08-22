@@ -61,6 +61,7 @@ class ProbesysJQueryExtension extends Extension
                            ? \array_merge($current[$key], $option)
                            : $option;
         }
+
         return $current;
     }
 

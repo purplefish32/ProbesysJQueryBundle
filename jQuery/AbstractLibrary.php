@@ -71,12 +71,13 @@ abstract class AbstractLibrary implements Library,
      /**
      * Set the version of the jQuery library used.
      *
-     * @param string $version
+     * @param  string                                $version
      * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setVersion($version)
     {
         $this->_version = $version;
+
         return $this;
     }
 
@@ -88,6 +89,7 @@ abstract class AbstractLibrary implements Library,
     public function setSsl($flag)
     {
         $this->_useSsl = (bool) $flag;
+
         return $this;
     }
 
@@ -104,7 +106,7 @@ abstract class AbstractLibrary implements Library,
     /**
      * Set path to local library
      *
-     * @param  string $path
+     * @param  string                                $path
      * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setLocalPath($path)
@@ -112,6 +114,7 @@ abstract class AbstractLibrary implements Library,
         if ($path !== false) {
             $this->_libraryLocalPath = (string) $path;
         }
+
         return $this;
     }
 
@@ -144,6 +147,7 @@ abstract class AbstractLibrary implements Library,
     {
         $source = $this->useLocalPath() ? $this->getLocalPath() : $this->getLibraryPath();
         $script = '<script type="text/javascript" src="' . $source . '"></script>' . PHP_EOL;
+
         return $script;
     }
 
@@ -160,6 +164,7 @@ abstract class AbstractLibrary implements Library,
                                 . $this->getVersion()
                                 . static::CDN_PATH_GOOGLE;
         }
+
         return $this->_libraryPath;
     }
 
@@ -171,6 +176,7 @@ abstract class AbstractLibrary implements Library,
         $baseUri = $this->useSsl() == true
                  ? self::CDN_BASE_GOOGLE_SSL
                  : self::CDN_BASE_GOOGLE;
+
         return $baseUri;
     }
 }

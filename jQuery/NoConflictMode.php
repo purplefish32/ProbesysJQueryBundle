@@ -61,7 +61,7 @@ class NoConflictMode implements Renderer
      * Will setup jQuery in the variable
      * $noConflictModeHandler instead of $ to overcome conflicts.
      *
-     * @param string $noConflictModehandler
+     * @param  string $noConflictModehandler
      * @return void
      */
     public function setNoConflictModeHandler($noConflictModeHandler)
@@ -76,10 +76,9 @@ class NoConflictMode implements Renderer
      */
     public function getNoConflictModeHandler()
     {
-        if($this->getNoConflictMode()) {
+        if ($this->getNoConflictMode()) {
             return $this->_noConflictModeHandler;
-        }
-        else{
+        } else {
             return "$";
         }
     }
@@ -94,6 +93,7 @@ class NoConflictMode implements Renderer
         if (! $this->getNoConflictMode()) {
             return '';
         }
+
         return sprintf(
             '<script type="text/javascript">var %s = jQuery.noConflict();</script>%s',
             $this->getNoConflictModeHandler(),

@@ -20,7 +20,7 @@ interface Library
     /**
      * Set the version of the jQuery library used.
      *
-     * @param string $version
+     * @param  string                                $version
      * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setVersion($version);
@@ -49,7 +49,7 @@ interface Library
     /**
      * Set path to local library
      *
-     * @param  string $path
+     * @param  string                                $path
      * @return \Probesys\JQueryBundle\JQuery\Library
      */
     public function setLocalPath($path);

@@ -22,7 +22,8 @@ class jQueryExtension extends \Twig_Extension
 {
     protected $jqueryApi;
 
-    public function __construct($jqueryApi){
+    public function __construct($jqueryApi)
+    {
         $this->jqueryApi = $jqueryApi;
     }
 
@@ -49,7 +50,8 @@ class jQueryExtension extends \Twig_Extension
         return 'jquery';
     }
 
-    public function getApi(){
+    public function getApi()
+    {
         return $this->jqueryApi;
     }
 }

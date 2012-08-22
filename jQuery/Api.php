@@ -34,12 +34,13 @@ class Api implements Renderer
     /**
      * Set Enable/Disable jQuery flag
      *
-     * @param bool $flag
+     * @param  bool                              $flag
      * @return \Probesys\JQueryBundle\jQuery\Api
      */
     public function setEnable($flag)
     {
         $this->_enabled = (bool) $flag;
+
         return $this;
     }
 
@@ -56,7 +57,7 @@ class Api implements Renderer
     /**
      * Set render helpers.
      *
-     * @param array $renderHelpers
+     * @param  array $renderHelpers
      * @return void
      */
     public function setRenderHelpers(array $renderHelpers)
@@ -70,7 +71,7 @@ class Api implements Renderer
      * Set render helper.
      *
      * @paramm string $name Helper name
-     * @param \Probesys\JQueryBundle\jQuery\Renderer $renderHelper
+     * @param  \Probesys\JQueryBundle\jQuery\Renderer                 $renderHelper
      * @return void
      * @throws \Probesys\JQueryBundle\jQuery\InvalidArgumentException
      *         If render helper not implements of Renderer
@@ -135,6 +136,7 @@ class Api implements Renderer
         foreach ($this->getRenderHelpers() as $helper) {
             $html .= $helper->render();
         }
+
         return $html;
     }
 
