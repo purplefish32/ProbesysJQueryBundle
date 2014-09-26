@@ -1,4 +1,5 @@
 ======================================================================
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/purplefish32/ProbesysJQueryBundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ProbesysJQueryBundle: Added jQuery support to Symfony2
 ======================================================================
 
